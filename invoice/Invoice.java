@@ -47,16 +47,17 @@ public class Invoice {
 
   public String format(InvoiceFormatter formatter) {
     String formattedInvoice = formatter.formatHeader();
+    StringBuilder formattedInvoiceBuilder = new StringBuilder(formattedInvoice);
     Iterator<Item> iter = getItems();
     PriceCalculator calculator = new PriceCalculator();
     while (iter.hasNext()) {
       Item item = iter.next();
-      formattedInvoice += formatter.formatItem(item);
+      formattedInvoiceBuilder.append(formatter.formatItem(item));
       accept(calculator);
       formatter.setTotalPrice(calculator.getTotalPrice());
     }
-    formattedInvoice += formatter.formatFooter();
-    return formattedInvoice;
+    formattedInvoiceBuilder.append(formatter.formatFooter());
+    return formattedInvoiceBuilder.toString();
   }
 
   // DELETE!!!!!!!
