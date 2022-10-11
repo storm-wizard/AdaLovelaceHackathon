@@ -15,6 +15,7 @@ public class Invoice {
 
   public Invoice() {
     items = new ArrayList<Item>();
+
   }
 
   public Invoice(int size) {
@@ -27,6 +28,7 @@ public class Invoice {
   
   public void addItem(Item item) {
     items.add(item);
+    sizeItem++;
   }
 
 
@@ -34,7 +36,7 @@ public class Invoice {
   public Iterator<Item> getItems() {
     return new Iterator<Item>() {
       public boolean hasNext() {
-        return current < items.size();
+        return current < sizeItem;
       }
 
       public Item next() {
@@ -46,6 +48,7 @@ public class Invoice {
       }
 
       private int current = 0;
+      
     };
   }
 
@@ -71,4 +74,5 @@ public class Invoice {
   }
 
   private ArrayList<Item> items;
+  private int sizeItem = 0;
 }
