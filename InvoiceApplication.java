@@ -45,41 +45,37 @@ public class InvoiceApplication {
     //String formattedInvoice = invoice.format(formatter);
     invoice.format(new SimpleFormatter());
 
-    // Computer data for the Company
+     // Computer data for the Company
     NumberOfHammersCalculator numHammersCalculator = new NumberOfHammersCalculator();
     invoice.accept(numHammersCalculator);
-    long numberOfHammers = numHammersCalculator.getNumber();
 
     NumberOfUnitsOfSteelCalculator steelUnitsCalculator = new NumberOfUnitsOfSteelCalculator();
     invoice.accept(steelUnitsCalculator);
-    long numberOfUnitsOfSteelRequired =  steelUnitsCalculator.getNumber();
 
     NumberOfNailsCalculator numNailsCalculator = new NumberOfNailsCalculator();
     invoice.accept(numNailsCalculator);
-    long numberOfNailsDispensed = numNailsCalculator.getNumber();
 
     PriceCalculator calculator = new PriceCalculator();
     invoice.accept(calculator);
     double totalPrice = calculator.getTotalPrice();
 
     // **************STOP THE CLOCK!**************
-    long endTime = System.currentTimeMillis(); 
-    int duration = (int)(endTime - startTime); 
+    long endTime = System.currentTimeMillis();
 
     //System.out.println(formattedInvoice); // print customer invoice
 
     // Print data for company
     System.out.println("\nData For Company Use");
     System.out.println("=====================");
-    System.out.println("Number of hammers sold: " + numberOfHammers);
-    System.out.println("Number of units of steel required: " + numberOfUnitsOfSteelRequired);
-    System.out.println("Number of nails dispensed: " + numberOfNailsDispensed);
+    System.out.println("Number of hammers sold: " + numHammersCalculator.getNumber());
+    System.out.println("Number of units of steel required: " + steelUnitsCalculator.getNumber());
+    System.out.println("Number of nails dispensed: " + numNailsCalculator.getNumber());
     System.out.println(String.format("Total price: €%,.2f\n", totalPrice));
     System.out.println("\n");
 
     // Print runtime stats
     System.out.println("START TIME: " + simpleDateFormat.format(startTime));
     System.out.println("END TIME:   " + simpleDateFormat.format(endTime));
-    System.out.println("DURATION:   " + duration + " milliseconds");
+    System.out.println("DURATION:   " + (int)(endTime - startTime) + " milliseconds");
   }
 }
