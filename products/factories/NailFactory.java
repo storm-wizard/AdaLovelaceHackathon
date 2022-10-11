@@ -19,7 +19,6 @@ public class NailFactory {
     }
 
 
-
     public static Item createLargeSteelFramingNails() {
         return new Steel(   
                 new Nails("framing nails", 45, 200));
