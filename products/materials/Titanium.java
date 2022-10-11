@@ -3,7 +3,7 @@ package products.materials;
 import products.Item;
 import visitor.ItemVisitor;
 
-public class Titanium {
+public class Titanium implements sampleInterface{
     Item item;
 
     final double TITANIUM_PREMIUM = 50;
