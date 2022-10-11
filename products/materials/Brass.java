@@ -4,7 +4,7 @@ import products.Item;
 import visitor.ItemVisitor;
 
 public class Brass {
-    Item item;
+    public Item item;
 
     final double BRASS_PREMIUM = 20;
     final String BRASS_DESCRIPTOR = "brass";

@@ -9,12 +9,12 @@ public class HammerFactory {
 
     public static Item createHeavySteelSledgeHammer() {
         return new Steel(
-                new Hammer("sledge hammer", 40, 14));
+                new Hammer("sledge hammer", 40, 14)).item;
     }
 
     public static Item createLightSteelFramingHammer() {
         return new Steel(
-                new Hammer("framing hammer", 30, 3));
+                new Hammer("framing hammer", 30, 3)).item;
     }
 
 }

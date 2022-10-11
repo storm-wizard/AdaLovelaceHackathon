@@ -8,6 +8,6 @@ public class SawFactory {
 
     public static Item createSteelJigsaw() {
         return new Steel(
-                new Saw("jigsaw", 50, "wood"));
+                new Saw("jigsaw", 50, "wood")).item;
     }
 }
