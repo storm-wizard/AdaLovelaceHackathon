@@ -3,7 +3,7 @@ package products;
 
 import visitor.ItemVisitor;
 
-import java.util.*;
+import java.util.ArrayList;
 
 /**
  *  A bundle of items
