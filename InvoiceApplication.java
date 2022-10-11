@@ -43,7 +43,8 @@ public class InvoiceApplication {
     }
 
     // Format invoice for the customer
-    String formattedInvoice = invoice.format(formatter);
+    //String formattedInvoice = invoice.format(formatter);
+    invoice.format(formatter);
 
     // Computer data for the Company
     NumberOfHammersCalculator numHammersCalculator = new NumberOfHammersCalculator();
