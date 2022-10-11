@@ -10,8 +10,4 @@ public class SawFactory {
         return new Steel(
                 new Saw("jigsaw", 50, "wood"));
     }
-
-    public static Item createCircularSawForConcrete() {
-        return new Saw("Circular Saw", 100, "concrete");
-    }
 }
