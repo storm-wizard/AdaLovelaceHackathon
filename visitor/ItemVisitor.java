@@ -17,12 +17,6 @@ public abstract class ItemVisitor {
     public void visit(Saw saw) {
     }
     
-    public void visit(Brass brass) {
-    }
-
-    public void visit(Steel steel) {
-    }
-    
-    public void visit(Titanium titanium) {
+    public void visit(sampleInterface materialItem) {
     }
 }
