@@ -29,7 +29,6 @@ public class InvoiceApplication {
     // **************START THE CLOCK!**************
     long startTime = System.currentTimeMillis();
     final Invoice invoice = new Invoice((int) noOfBundles);
-    final InvoiceFormatter formatter = new SimpleFormatter();
 
     // Create given number of bundles and add them to invoice
     for(int i = 0; i < noOfBundles; i++) {
@@ -44,7 +43,7 @@ public class InvoiceApplication {
 
     // Format invoice for the customer
     //String formattedInvoice = invoice.format(formatter);
-    invoice.format(formatter);
+    invoice.format(new SimpleFormatter());
 
     // Computer data for the Company
     NumberOfHammersCalculator numHammersCalculator = new NumberOfHammersCalculator();
