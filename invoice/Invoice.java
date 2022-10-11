@@ -55,7 +55,8 @@ public class Invoice {
     Iterator<Item> iter = getItems();
     PriceCalculator calculator = new PriceCalculator();
     while (iter.hasNext()) {
-      Item item = iter.next();
+      // Item item = 
+      iter.next();
       //formattedInvoiceBuilder.append(formatter.formatItem(item));
       accept(calculator);
       formatter.setTotalPrice(calculator.getTotalPrice());
