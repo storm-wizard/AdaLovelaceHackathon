@@ -49,19 +49,19 @@ public class Invoice {
     };
   }
 
-  public void format(InvoiceFormatter formatter) {
-    //String formattedInvoice = formatter.formatHeader();
-    //StringBuilder formattedInvoiceBuilder = new StringBuilder(formattedInvoice);
+  public String format(InvoiceFormatter formatter) {
+    String formattedInvoice = formatter.formatHeader();
+    StringBuilder formattedInvoiceBuilder = new StringBuilder(formattedInvoice);
     Iterator<Item> iter = getItems();
     PriceCalculator calculator = new PriceCalculator();
     while (iter.hasNext()) {
       Item item = iter.next();
-      //formattedInvoiceBuilder.append(formatter.formatItem(item));
+      formattedInvoiceBuilder.append(formatter.formatItem(item));
       accept(calculator);
       formatter.setTotalPrice(calculator.getTotalPrice());
     }
-    //formattedInvoiceBuilder.append(formatter.formatFooter());
-    //return formattedInvoice;
+    formattedInvoiceBuilder.append(formatter.formatFooter());
+    return formattedInvoiceBuilder.toString();
   }
 
   public void accept(ItemVisitor visitor) {

@@ -23,7 +23,7 @@ public class InvoiceApplication {
     SimpleDateFormat simpleDateFormat = new SimpleDateFormat("HH:mm:ss.SSSSSS");
 
     // Measure of how much work to do
-    long noOfBundles = Long.parseLong(args[0]);
+    int noOfBundles = (int) Long.parseLong(args[0]);
     // long noOfBundles = 5000;
 
     // **************START THE CLOCK!**************
@@ -42,8 +42,7 @@ public class InvoiceApplication {
     }
 
     // Format invoice for the customer
-    //String formattedInvoice = invoice.format(formatter);
-    invoice.format(new SimpleFormatter());
+    String formattedInvoice = invoice.format(new SimpleFormatter());
 
     // Computer data for the Company
     NumberOfHammersCalculator numHammersCalculator = new NumberOfHammersCalculator();
