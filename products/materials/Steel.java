@@ -3,7 +3,7 @@ package products.materials;
 import products.Item;
 import visitor.ItemVisitor;
 
-public class Steel {
+public class Steel implements sampleInterface {
     public Item item;
     final double STEEL_PREMIUM = 10;
     final String STEEL_DESCRIPTOR = "steel";
