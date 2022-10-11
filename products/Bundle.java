@@ -33,13 +33,13 @@ public class Bundle implements Item {
 
   @Override
   public String toString() {
-    String description = "Bundle: ";
+    StringBuilder description = new StringBuilder("Bundle: ");
     for (int i = 0; i < items.size(); i++) {
       if (i > 0)
-        description += ", ";
-      description += items.get(i).toString();
+        description.append(", ");
+      description.append(items.get(i).toString());
     }
-    return description;
+    return description.toString();
   }
 
   public void accept(ItemVisitor visitor) {
