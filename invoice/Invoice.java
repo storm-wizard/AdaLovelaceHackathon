@@ -16,6 +16,10 @@ public class Invoice {
   public Invoice() {
     items = new ArrayList<Item>();
   }
+
+  public Invoice(int size) {
+    items = new ArrayList<Item>(size);
+  }
   
   public Invoice(ArrayList<Item> initialItems) {
     items = initialItems;

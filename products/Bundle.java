@@ -15,6 +15,10 @@ public class Bundle implements Item {
     items = new ArrayList<Item>();
   }
 
+  public Bundle(int size) {
+    items = new ArrayList<Item>(size);
+  }
+
   public void add(Item item) {
     items.add(item);
   }

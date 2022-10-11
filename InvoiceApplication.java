@@ -28,12 +28,12 @@ public class InvoiceApplication {
 
     // **************START THE CLOCK!**************
     long startTime = System.currentTimeMillis();
-    final Invoice invoice = new Invoice();
+    final Invoice invoice = new Invoice((int) noOfBundles);
     final InvoiceFormatter formatter = new SimpleFormatter();
 
     // Create given number of bundles and add them to invoice
     for(int i = 0; i < noOfBundles; i++) {
-      Bundle starterBundle = new Bundle();
+      Bundle starterBundle = new Bundle(5);
       starterBundle.add(HammerFactory.createLightSteelFramingHammer());
       starterBundle.add(NailFactory.createLargeSteelFramingNails());
       starterBundle.add(NailFactory.createMediumBrassRoofingNails());
