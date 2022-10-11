@@ -22,7 +22,7 @@ public class Titanium extends ItemDecorator {
     }
     @Override
     public String toString() {
-        return TITANIUM_DESCRIPTOR + " " + item.toString();
+        return new StringBuilder().append(TITANIUM_DESCRIPTOR).append(" ").append(item.toString()).toString();
     }
 
     @Override

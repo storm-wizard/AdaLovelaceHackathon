@@ -23,7 +23,7 @@ public class Steel extends ItemDecorator {
 
     @Override
     public String toString() {
-        return STEEL_DESCRIPTOR + " " +  item.toString();
+        return new StringBuilder().append(STEEL_DESCRIPTOR).append(" ").append(item.toString()).toString();
     }
 
     @Override

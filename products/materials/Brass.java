@@ -21,7 +21,7 @@ public class Brass extends ItemDecorator {
     }
     @Override
     public String toString() {
-        return BRASS_DESCRIPTOR + " " + item.toString();
+        return new StringBuilder().append(BRASS_DESCRIPTOR).append(" ").append(item.toString()).toString();
     }
 
     @Override
