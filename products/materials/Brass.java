@@ -3,7 +3,7 @@ package products.materials;
 import products.Item;
 import visitor.ItemVisitor;
 
-public class Brass {
+public class Brass implements sampleInterface {
     public Item item;
 
     final double BRASS_PREMIUM = 20;
