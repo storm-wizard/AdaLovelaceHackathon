@@ -1,5 +1,4 @@
 import invoice.Invoice;
-import invoice.InvoiceFormatter;
 import invoice.SimpleFormatter;
 import products.Bundle;
 import products.factories.HammerFactory;

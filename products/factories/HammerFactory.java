@@ -2,7 +2,6 @@ package products.factories;
 
 import products.Item;
 import products.impl.Hammer;
-import products.materials.Titanium;
 import products.materials.Steel;
 
 public class HammerFactory {

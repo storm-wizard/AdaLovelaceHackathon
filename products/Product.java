@@ -1,8 +1,5 @@
 package products;
 
-
-import visitor.ItemVisitor;
-
 /**
  * A product with a price and description.
  */

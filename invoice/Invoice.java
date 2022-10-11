@@ -22,10 +22,6 @@ public class Invoice {
     items = new ArrayList<Item>(size);
   }
   
-  public Invoice(ArrayList<Item> initialItems) {
-    items = initialItems;
-  }
-  
   public void addItem(Item item) {
     items.add(item);
     sizeItem++;
