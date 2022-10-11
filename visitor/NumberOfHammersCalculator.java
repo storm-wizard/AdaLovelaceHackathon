@@ -9,9 +9,9 @@ public class NumberOfHammersCalculator extends ItemVisitor {
         number++;
     }
 
-    public long getNumber() {
+    public int getNumber() {
         return number;
     }
 
-    private long number = 0;
+    private int number = 0;
 }
